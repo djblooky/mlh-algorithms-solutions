@@ -1,5 +1,12 @@
 #include <iostream>
 
-int main(){
-    
+bool rotate(std::string original, std::string candidate)
+{
+    return original.length == candidate.length && candidate.contains(original*2); //need to fix
 }
+
+int main()
+{
+    rotate("ABCD","BCDA"); 
+}
+
