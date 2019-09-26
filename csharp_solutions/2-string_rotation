@@ -1,0 +1,33 @@
+using System;
+ 
+class MainClass
+{
+ public static void Main ()
+ {
+   RotateString(string input, string[] check, string stop);
+ }
+ 
+ private void RotateString(string input, string[] check, string stop)
+ {
+   input = Console.ReadLine();
+   if(input == check)
+   {
+     Console.WriteLine("Input==Check");
+     return;
+   }
+   if(check == stop)
+   {
+     //gone through all rotations
+     Console.WriteLine("Check == Stop");
+     return false;
+   }
+   if(!stop)
+   {
+     stop = check;
+   }
+ 
+   string rot = check[0] + check[1];
+   //Console.WriteLine(input + ", " + rot + ", " + stop);
+   return RotateString(input, rot, stop);
+ }
+}
