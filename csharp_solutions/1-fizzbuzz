@@ -16,7 +16,7 @@ class MainClass
             {  
             Console.WriteLine("Fizz");  
             }  
-            else if (i % 5 == 0)  
+            else if (i % 5 == 0)
             {  
             Console.WriteLine("Buzz");  
             }  
