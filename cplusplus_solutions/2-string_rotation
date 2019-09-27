@@ -1,5 +1,33 @@
 #include <iostream>
 
-int main(){
+
+//solution 2
+bool isRotation(std::string s1, std::string s2)
+{
+    if(!(s1.length() == s2.length()))
+        return false;
+  
+    return (s1+s1).find(s2) != std::string::npos; 
     
+    //As a return value, string::npos is usually used to indicate no matches.
+    //http://www.cplusplus.com/reference/string/string/npos/
 }
+
+//doubling the string creates a collection of every possible rotation
+//ABCDABCD
+
+//solution 2 shortened
+bool isRotation(std::string s1, std::string s2)
+{
+    return (s1.length() == s2.length()) && (s1+s1).find(s2) != std::string::npos;
+}
+
+
+int main()
+{
+     if ( isRotation("ABCD","ACDB")) 
+        std::cout << "Strings are a rotation";
+     else
+        std::cout << "Strings are not a rotation";
+}
+
