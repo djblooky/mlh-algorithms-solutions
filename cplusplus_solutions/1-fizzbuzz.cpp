@@ -2,7 +2,11 @@
 
 int main() {
 
-  for(int i=1;i<=100;i++){
+  int num;
+  std::cout
+  std::cin >> num;
+  
+  for(int i=1;i<=num;i++){
        if((i%3 == 0) && (i%5==0))
            std::cout<<"FizzBuzz\n";
        else if(i%3 == 0)
